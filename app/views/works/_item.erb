@@ -1,0 +1,7 @@
+<div class= "container__item">
+  <div class= "container__item--image">
+  </div>
+  <h2 class= "container__item--title"><%= work.title%></h2>
+  <%= link_to "詳細を見る", work_path(work.id), class: "container__item--btn" %>
+  <p class="container__item--date"><span class="bold">作成日時 </span><%= work.created_at %></p>
+</div>

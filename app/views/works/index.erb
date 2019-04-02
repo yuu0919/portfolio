@@ -1,0 +1,11 @@
+<header class= "header">
+  <h1 class= "header__name"><%= current_user.name %>のポートフォリオ(最新<%= @works.length %>件)</h1>
+</header>
+<div class= "container">
+  <% @works.each do |work| %>
+    <%= render partial: "item", locals: {work: work} %>
+  <% end %>
+
+    <%= link_to "全ての作品へ", user_path(current_user.id), class: "link" %>
+
+</div>
